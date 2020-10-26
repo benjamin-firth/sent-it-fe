@@ -1,8 +1,15 @@
 import React from 'react';
 
-const Welcome = () => {
+const Welcome = ({ login }) => {
+  const clickHandler = () => {
+    login();
+  }
+
   return (
-    <h1>Welcome</h1>
+    <section>
+      <h1>Welcome!</h1>
+      <button type='button' onClick={clickHandler}>LOGIN</button>
+    </section>
   )
 }
 
