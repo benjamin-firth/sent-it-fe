@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../AppContext/AppContext';
 
 const ClimbForm = () => {
+  const { saveClimb } = useContext(AppContext);
   const [climbName, addClimbName] = useState('');
   const [climbType, addClimbType] = useState('');
   const [climbGrade, addClimbGrade] = useState('');
@@ -14,15 +16,17 @@ const ClimbForm = () => {
     if (climbName === '' || climbType === '' || climbGrade === '') {
       console.log('not today')
     } else {
-      console.log({
-        climbName,
-        climbType,
-        climbGrade,
-        climbLocation,
-        climbAttempts,
-        climbComments,
-        climbPictures
-      });
+      const newClimb = {
+        name: climbName,
+        type: climbType,
+        grade: climbGrade,
+        location: climbLocation,
+        attempts: climbAttempts,
+        comments: climbComments,
+        pics: climbPictures
+      };
+
+      saveClimb(newClimb);
     };
   };
 

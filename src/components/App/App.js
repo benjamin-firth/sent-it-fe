@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AppProvider from '../AppContext/AppContext';
 import Welcome from '../Welcome/Welcome';
 import Header from '../Header/Header';
 import ClimbContainer from '../ClimbContainer/ClimbContainer';
@@ -13,17 +14,19 @@ const App = () => {
   }
 
   return (
-    <main>
-      {
-        !isLoggedIn ?
-        <Welcome login={login} /> :
-        <>
-          <Header />
-          <ClimbForm />
-          <ClimbContainer />
-        </>
-      }
-    </main>
+    <AppProvider>
+      <main>
+        {
+          !isLoggedIn ?
+          <Welcome login={login} /> :
+          <>
+            <Header />
+            <ClimbForm />
+            <ClimbContainer />
+          </>
+        }
+      </main>
+    </AppProvider>
   );
 }
 
