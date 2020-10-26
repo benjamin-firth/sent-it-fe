@@ -8,18 +8,23 @@ const ClimbForm = () => {
   const [climbAttempts, addClimbAttempts] = useState('');
   const [climbComments, addClimbComments] = useState('');
   const [climbPictures, addClimbPictures] = useState('');
+  // const [formFilled, setFormFilled] = useState(false);
 
   const submitHandler = () => {
-    console.log({
-      climbName,
-      climbType,
-      climbGrade,
-      climbLocation,
-      climbAttempts,
-      climbComments,
-      climbPictures
-    });
-  }
+    if (climbName === '' || climbType === '' || climbGrade === '') {
+      console.log('not today')
+    } else {
+      console.log({
+        climbName,
+        climbType,
+        climbGrade,
+        climbLocation,
+        climbAttempts,
+        climbComments,
+        climbPictures
+      });
+    };
+  };
 
   return (
     <section>
