@@ -1,15 +1,15 @@
 import React from 'react';
 
-const ClimbCard = ({ climbName, climbType, climbGrade, climbLocation, climbAttempts, climbComments, climbPictures }) => {
+const ClimbCard = ({ name, type, grade, location, attempts, comments, pics }) => {
   return (
     <section>
-      <h3>{climbName}</h3>
-      <p>{climbType}</p>
-      <p>{climbGrade}</p>
-      <p>{climbLocation}</p>
-      <p>{climbAttempts}</p>
-      <p>{climbComments}</p>
-      <p>{climbPictures}</p>
+      <h3>{name}</h3>
+      <p>{type}</p>
+      <p>{grade}</p>
+      <p>{location}</p>
+      <p>{attempts}</p>
+      <p>{comments}</p>
+      <p>{pics}</p>
     </section>
   )
 }
