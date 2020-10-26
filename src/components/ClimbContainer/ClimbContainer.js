@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../AppContext/AppContext';
+import ClimbCard from '../ClimbCard/ClimbCard';
 
 const ClimbContainer = () => {
+  const { climbs } = useContext(AppContext);
 
   return (
     <section>
-      <h1>ClimbContainer!</h1>
+      { climbs.map(climb => (
+        <ClimbCard key={climb.id} name={climb.name} />
+      )) }
     </section>
   )
 }
