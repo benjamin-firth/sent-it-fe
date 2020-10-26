@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Welcome from '../Welcome/Welcome';
 import Header from '../Header/Header';
+import ClimbContainer from '../ClimbContainer/ClimbContainer';
+import ClimbForm from '../ClimbForm/ClimbForm';
 import './App.css';
 
 const App = () => {
@@ -15,7 +17,11 @@ const App = () => {
       {
         !isLoggedIn ?
         <Welcome login={login} /> :
-        <Header />
+        <>
+          <Header />
+          <ClimbForm />
+          <ClimbContainer />
+        </>
       }
     </main>
   );
