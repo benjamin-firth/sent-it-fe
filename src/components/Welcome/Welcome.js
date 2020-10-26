@@ -3,7 +3,7 @@ import React from 'react';
 const Welcome = ({ login }) => {
   const clickHandler = () => {
     login();
-  }
+  };
 
   return (
     <section>
