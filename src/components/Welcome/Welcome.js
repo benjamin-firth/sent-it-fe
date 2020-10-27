@@ -35,7 +35,6 @@ const StyledBackground = styled.div`
 
 const StyledWelcomeMain = styled.section`
   align-items: center;
-  // background-color: rgba(66,82,143,0.8);
   background-color: rgba(58, 68, 110,0.8);
   display: flex;
   flex-direction: column;
@@ -58,6 +57,7 @@ const StyledWelcomeTitle = styled.div`
 
   h1 {
     font-size: 2.5em;
+    letter-spacing: 2px;
     margin-bottom: 15px;
     margin-top: 2px;
   }
