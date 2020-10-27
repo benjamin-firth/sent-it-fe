@@ -49,7 +49,8 @@ const StyledWelcomeTitle = styled.div`
   color: #FFF;
   display: flex;
   flex-direction: column;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
+  text-shadow: 1px 1px #14192C;
 
   h3 {
     font-size: 1.2em;
@@ -88,6 +89,14 @@ const StyledLoginButton = styled.button`
     border: 1px solid #CAD1EE;
     color: #FFF;
   }
+
+  &:active {
+    background-color: #101628;
+    border: 1px solid #CAD1EE;
+    color: #FFF;
+    transform: scale(1.1);
+    transition: .1s;
+  }
 `;
 
 const StyledCreateButton = styled.button`
@@ -105,6 +114,15 @@ const StyledCreateButton = styled.button`
     border: none;
     color: #14192C;
   }
+
+  &:active {
+    background-color: #CAD1EE;
+    border: none;
+    color: #14192C;
+    transform: scale(1.1);
+    transition: .1s;
+  }
+
 `;
 
 export default Welcome;
