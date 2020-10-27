@@ -1,8 +1,18 @@
 import React from 'react';
 
-const ClimbCard = ({ name, type, grade, location, attempts, comments, pics }) => {
+const ClimbCard = ({ climb }) => {
+  const {
+    name, 
+    type,
+    grade,
+    location,
+    attempts,
+    comments,
+    pics
+  } = climb;
+
   return (
-    <section>
+    <article>
       <h3>{name}</h3>
       <p>{type}</p>
       <p>{grade}</p>
@@ -10,7 +20,7 @@ const ClimbCard = ({ name, type, grade, location, attempts, comments, pics }) =>
       <p>{attempts}</p>
       <p>{comments}</p>
       <p>{pics}</p>
-    </section>
+    </article>
   )
 }
 
