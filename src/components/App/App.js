@@ -4,6 +4,7 @@ import Welcome from '../Welcome/Welcome';
 import Header from '../Header/Header';
 import ClimbContainer from '../ClimbContainer/ClimbContainer';
 import ClimbForm from '../ClimbForm/ClimbForm';
+import styled from 'styled-components';
 import './App.css';
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
 
   return (
     <AppProvider>
-      <main>
+      <StyledMain>
         {
           !isLoggedIn ?
           <Welcome login={login} /> :
@@ -25,9 +26,19 @@ const App = () => {
             <ClimbContainer />
           </>
         }
-      </main>
+      </StyledMain>
     </AppProvider>
   );
 }
+
+const StyledMain = styled.section`
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  width: 100vw;
+  height: 100vh;
+`;
 
 export default App;
