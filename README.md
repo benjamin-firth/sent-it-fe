@@ -11,6 +11,6 @@ My own goals for the project are as follows.
 - API must include: get, post, put, and delete endpoints
 - Must choose a design inspo from the following: https://dribbble.com/search/climbing
 
-The design insporation I chose was this configuration image:
+The design inspiration I chose was this configuration image:
 
 <img width="768" alt="Screen Shot 2020-10-27 at 10 14 46 AM" src="https://user-images.githubusercontent.com/32349614/97342428-d29c3b00-184b-11eb-97c3-823c5cae406e.png">
