@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
+import styled from 'styled-components';
 import { AppContext } from '../AppContext/AppContext';
+import bouldererPic from '../../images/bouldererpic.jpg';
 
 const ClimbForm = () => {
   const { saveClimb } = useContext(AppContext);
@@ -31,9 +33,9 @@ const ClimbForm = () => {
   };
 
   return (
-    <section>
+    <StyledClimbFormContainer>
       <h2>Add New Send</h2>
-      <form>
+      <StyledClimbForm>
         <label>Name</label>
         <input onChange={(e) => addClimbName(e.target.value)} />
         <label>Type</label>
@@ -49,9 +51,40 @@ const ClimbForm = () => {
         <label>Pictures</label>
         <input onChange={(e) => addClimbPictures(e.target.value)} />
         <button type='button' onClick={submitHandler}>Add Climb</button>
-      </form>
-    </section>
-  )
-}
+      </StyledClimbForm>
+    </StyledClimbFormContainer>
+  );
+};
+
+const StyledClimbFormContainer = styled.section`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+`;
+
+const StyledClimbForm = styled.form`
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+  label {
+    font-size: 1.2em;
+  }
+
+  input {
+    height: 2em;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  button {
+    font-size: 1.5em;
+    padding: 1px 0px;
+    width: 60%;
+  }
+`;
 
 export default ClimbForm;
