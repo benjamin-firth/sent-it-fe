@@ -61,6 +61,10 @@ const StyledClimbFormContainer = styled.section`
   display: flex;
   flex-direction: column;
   padding: 20px 0px;
+
+  h2 {
+    font-size: 1.7em;
+  }
 `;
 
 const StyledClimbForm = styled.form`
@@ -74,6 +78,7 @@ const StyledClimbForm = styled.form`
   }
 
   input {
+    border-radius: 5px;
     height: 2em;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -81,9 +86,27 @@ const StyledClimbForm = styled.form`
   }
 
   button {
+    background-color: #CAD1EE;
+    color: #14192C;
+    cursor: pointer;
+    border-radius: 5px;
     font-size: 1.5em;
     padding: 1px 0px;
     width: 60%;
+  }
+
+  button:hover {
+    background-color: #101628;
+    border: 1px solid #CAD1EE;
+    color: #FFF;
+  }
+
+  button:active {
+    background-color: #101628;
+    border: 1px solid #CAD1EE;
+    color: #FFF;
+    transform: scale(1.1);
+    transition: .1s;
   }
 `;
 

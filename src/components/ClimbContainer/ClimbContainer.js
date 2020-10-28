@@ -12,8 +12,8 @@ const ClimbContainer = () => {
         <ClimbCard key={climb.id} climb={climb} />
       )) }
     </StyledClimbs>
-  )
-}
+  );
+};
 
 const StyledClimbs = styled.section`
   display: flex;
