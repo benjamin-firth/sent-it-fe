@@ -9,6 +9,12 @@ const AppProvider = ({ children }) => {
     const newClimb = {
       id: Math.random(), 
       name: climb.name,
+      type: climb.type,
+      grade: climb.grade,
+      location: climb.location,
+      attempts: climb.attempts,
+      comments: climb.comments,
+      pics: climb.pics,
     };
     setClimbs([...climbs, newClimb ]);
   };

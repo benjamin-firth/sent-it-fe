@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
+import styled from 'styled-components';
 import { AppContext } from '../AppContext/AppContext';
+import bouldererPic from '../../images/bouldererpic.jpg';
 
 const ClimbForm = () => {
   const { saveClimb } = useContext(AppContext);
@@ -31,9 +33,9 @@ const ClimbForm = () => {
   };
 
   return (
-    <section>
+    <StyledClimbFormContainer>
       <h2>Add New Send</h2>
-      <form>
+      <StyledClimbForm>
         <label>Name</label>
         <input onChange={(e) => addClimbName(e.target.value)} />
         <label>Type</label>
@@ -49,9 +51,63 @@ const ClimbForm = () => {
         <label>Pictures</label>
         <input onChange={(e) => addClimbPictures(e.target.value)} />
         <button type='button' onClick={submitHandler}>Add Climb</button>
-      </form>
-    </section>
-  )
-}
+      </StyledClimbForm>
+    </StyledClimbFormContainer>
+  );
+};
+
+const StyledClimbFormContainer = styled.section`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+
+  h2 {
+    font-size: 1.7em;
+  }
+`;
+
+const StyledClimbForm = styled.form`
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+  label {
+    font-size: 1.2em;
+  }
+
+  input {
+    border-radius: 5px;
+    height: 2em;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  button {
+    background-color: #CAD1EE;
+    color: #14192C;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding: 1px 0px;
+    width: 60%;
+  }
+
+  button:hover {
+    background-color: #101628;
+    border: 1px solid #CAD1EE;
+    color: #FFF;
+  }
+
+  button:active {
+    background-color: #101628;
+    border: 1px solid #CAD1EE;
+    color: #FFF;
+    transform: scale(1.1);
+    transition: .1s;
+  }
+`;
 
 export default ClimbForm;

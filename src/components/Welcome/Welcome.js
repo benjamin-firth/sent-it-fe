@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ropedClimber from '../../images/ropeclimber.jpg';
-import bouldererPic from '../../images/ropeclimber.jpg';
+
 
 const Welcome = ({ login }) => {
   const clickHandler = () => {

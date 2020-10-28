@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import AppProvider from '../AppContext/AppContext';
 import Welcome from '../Welcome/Welcome';
 import Header from '../Header/Header';
-import ClimbContainer from '../ClimbContainer/ClimbContainer';
-import ClimbForm from '../ClimbForm/ClimbForm';
+import LowerMain from '../LowerMain/LowerMain';
 import styled from 'styled-components';
 import './App.css';
 
@@ -22,8 +21,7 @@ const App = () => {
           <Welcome login={login} /> :
           <>
             <Header />
-            <ClimbForm />
-            <ClimbContainer />
+            <LowerMain />
           </>
         }
       </StyledMain>
