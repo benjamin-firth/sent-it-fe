@@ -17,7 +17,7 @@ const LowerMain = () => {
         {showAddForm ?
           <>
             <button type='button' onClick={handleClick}>Hide Form</button>
-            <ClimbForm />
+            <ClimbForm hideForm={handleClick} />
           </> :
           <>
             <button type='button' onClick={handleClick}>Add Climb</button>

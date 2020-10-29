@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { AppContext } from '../AppContext/AppContext';
 import bouldererPic from '../../images/bouldererpic.jpg';
 
-const ClimbForm = () => {
+const ClimbForm = ({ hideForm }) => {
   const { saveClimb } = useContext(AppContext);
   const [climbName, addClimbName] = useState('');
   const [climbType, addClimbType] = useState('');
@@ -29,6 +29,7 @@ const ClimbForm = () => {
       };
 
       saveClimb(newClimb);
+      hideForm();
     };
   };
 
