@@ -8,17 +8,29 @@ const ClimbContainer = () => {
 
   return (
     <StyledClimbs>
-      { climbs.map(climb => (
-        <ClimbCard key={climb.id} climb={climb} />
-      )) }
+      <StyledClimbScroll>
+        { climbs.map(climb => (
+          <ClimbCard key={climb.id} climb={climb} />
+        )) }
+      </StyledClimbScroll>
     </StyledClimbs>
   );
 };
 
 const StyledClimbs = styled.section`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 65vh;
+  padding: 10px;
+`;
+
+const StyledClimbScroll = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: scroll;
+  scroll-behavior: smooth;
 `;
 
 export default ClimbContainer;

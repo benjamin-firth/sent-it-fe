@@ -16,11 +16,12 @@ const LowerMain = () => {
       <StyledLowerMain>
         {showAddForm ?
           <>
-            <button type='button' onClick={handleClick}>Hide Form</button>
-            <ClimbForm />
+            <StyledAddClimbButton type='button' onClick={handleClick}>Hide Form</StyledAddClimbButton>
+            <ClimbForm hideForm={handleClick} />
           </> :
           <>
-            <button type='button' onClick={handleClick}>Add Climb</button>
+            <h2>Recent Sends</h2>
+            <StyledAddClimbButton type='button' onClick={handleClick}>Add Climb</StyledAddClimbButton>
             <ClimbContainer />
           </>
         }   
@@ -38,8 +39,41 @@ const StyledLowerBackground = styled.div`
 `;
 
 const StyledLowerMain = styled.section`
-  height: 88vh;
-  background-color: rgba(202, 209, 238,0.6);
+align-items: center;
+background-color: rgba(202, 209, 238,0.6);
+display: flex;
+flex-direction: column;
+height: 88vh;
+padding-top: 20px;
+
+  h2 {
+    font-size: 1.7em;
+  }
+`;
+
+const StyledAddClimbButton = styled.button`
+  background-color: #CAD1EE;
+  border-radius: 10px;
+  color: #14192C;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 6px;
+  margin: 10px 0px;
+  width: 60%;
+
+  &:hover {
+    background-color: #101628;
+    border: 1px solid #CAD1EE;
+    color: #FFF;
+  }
+
+  &:active {
+    background-color: #101628;
+    border: 1px solid #CAD1EE;
+    color: #FFF;
+    transform: scale(1.1);
+    transition: .1s;
+  }
 `;
 
 export default LowerMain;
