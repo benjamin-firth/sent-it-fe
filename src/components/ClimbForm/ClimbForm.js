@@ -62,6 +62,7 @@ const StyledClimbFormContainer = styled.section`
   display: flex;
   flex-direction: column;
   padding: 20px 0px;
+  width: 100%;
 
   h2 {
     font-size: 1.7em;
