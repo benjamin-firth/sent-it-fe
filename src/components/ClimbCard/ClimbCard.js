@@ -26,10 +26,13 @@ const ClimbCard = ({ climb }) => {
 };
 
 const StyledClimbCard = styled.article`
+  background-color: #101628;
   border: 1px solid #000;
   border-radius: 5px;
+  color: #FFF;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
   padding: 15px;
   width: 220px;
 `;
