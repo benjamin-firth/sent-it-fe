@@ -26,7 +26,7 @@ const StyledClimberCard = styled.article`
   color: #FFF;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin: 10px 10px 10px 10px;
   padding: 15px;
   width: 220px;
 `;
